@@ -147,7 +147,7 @@ Corporate onboarding uses static "one-size-fits-all" curricula. Experienced hire
 
 ---
 
-## 🚀 Setup & Installation
+##  Setup & Installation
 
 ### Prerequisites
 - Python 3.11+
