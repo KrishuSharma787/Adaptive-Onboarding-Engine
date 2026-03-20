@@ -12,7 +12,7 @@ echo "=================================================="
 # Check for .env
 if [ ! -f .env ]; then
     echo ""
-    echo "⚠️  No .env file found. Creating from template..."
+    echo "  No .env file found. Creating from template..."
     cp .env.example .env
     echo "   Please edit .env and add your GROQ_API_KEY"
     echo "   Then re-run this script."
@@ -22,7 +22,7 @@ fi
 # Check for Resume.csv
 if [ ! -f data/Resume.csv ]; then
     echo ""
-    echo "⚠️  No Resume.csv found in data/"
+    echo "  No Resume.csv found in data/"
     echo "   Please download from: https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset/data"
     echo "   Place Resume.csv in the data/ directory"
     echo ""
@@ -31,7 +31,7 @@ fi
 
 # Backend setup
 echo ""
-echo "📦 Setting up backend..."
+echo " Setting up backend..."
 cd backend
 
 if [ ! -d "venv" ]; then
@@ -41,12 +41,12 @@ fi
 source venv/bin/activate
 pip install -r requirements.txt --quiet
 
-echo "✅ Backend dependencies installed"
+echo " Backend dependencies installed"
 
 # Pre-build course catalog
 if [ -f "../data/Resume.csv" ] && [ ! -f "app/data/course_catalog.json" ]; then
     echo ""
-    echo "📊 Building course catalog from resume dataset..."
+    echo " Building course catalog from resume dataset..."
     python3 -c "
 import os, sys
 sys.path.insert(0, '.')
@@ -54,22 +54,22 @@ os.makedirs('app/data', exist_ok=True)
 from app.services.catalog_builder import build_catalog_from_csv
 build_catalog_from_csv('../data/Resume.csv', 'app/data/course_catalog.json')
 "
-    echo "✅ Course catalog built"
+    echo " Course catalog built"
 fi
 
 cd ..
 
 # Frontend setup
 echo ""
-echo "📦 Setting up frontend..."
+echo " Setting up frontend..."
 cd frontend
 npm install --silent
-echo "✅ Frontend dependencies installed"
+echo " Frontend dependencies installed"
 cd ..
 
 echo ""
 echo "=================================================="
-echo "  ✅ Setup Complete!"
+echo "   Setup Complete!"
 echo "=================================================="
 echo ""
 echo "  To start the application:"
