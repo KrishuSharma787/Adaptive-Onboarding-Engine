@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #0a0e1a;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111827; }
+::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+
+/* Upload zone */
+.upload-zone {
+  border: 2px dashed #374151;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.upload-zone:hover,
+.upload-zone.active {
+  border-color: #06d6a0;
+  background: rgba(6, 214, 160, 0.04);
+}
+.upload-zone.has-file {
+  border-color: #06d6a0;
+  border-style: solid;
+  background: rgba(6, 214, 160, 0.06);
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(55, 65, 81, 0.5);
+  border-radius: 12px;
+}
+
+/* Phase badge colors */
+.phase-1 { background: rgba(6, 214, 160, 0.15); color: #06d6a0; }
+.phase-2 { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
+.phase-3 { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+
+/* Reasoning trace */
+.trace-line {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.trace-line.init { background: rgba(56, 189, 248, 0.08); color: #7dd3fc; }
+.trace-line.analysis { background: rgba(167, 139, 250, 0.08); color: #c4b5fd; }
+.trace-line.gap { background: rgba(251, 191, 36, 0.08); color: #fde68a; }
+.trace-line.retrieve { background: rgba(6, 214, 160, 0.08); color: #6ee7b7; }
+.trace-line.warning { background: rgba(239, 68, 68, 0.08); color: #fca5a5; }
+.trace-line.complete { background: rgba(6, 214, 160, 0.12); color: #06d6a0; }
+.trace-line.savings { background: rgba(6, 214, 160, 0.15); color: #06d6a0; font-weight: 500; }
+
+/* Pulse animation for loading */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(6, 214, 160, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(6, 214, 160, 0.4); }
+}
+.pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* Fade in animation for streaming cards */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
+
+/* Radar chart custom */
+.recharts-polar-grid-angle line { stroke: #374151; }
+.recharts-polar-grid-concentric path { stroke: #1f2937; }
+
+/* React Flow custom nodes */
+.react-flow__node {
+  font-family: 'DM Sans', sans-serif;
+}
+.react-flow__edge-path {
+  stroke: #4b5563;
+  stroke-width: 2;
+}
+.react-flow__background {
+  background-color: #0a0e1a;
+}

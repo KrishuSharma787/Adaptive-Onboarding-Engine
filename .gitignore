@@ -1,0 +1,30 @@
+# Environment
+.env
+*.pyc
+__pycache__/
+venv/
+.venv/
+
+# Data
+data/
+*.db
+chroma_db/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.egg-info/
+build/
