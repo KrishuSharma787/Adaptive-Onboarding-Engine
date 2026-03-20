@@ -1,4 +1,4 @@
-# 🚀 AI-Adaptive Onboarding Engine
+#  AI-Adaptive Onboarding Engine
 
 An AI-driven adaptive learning engine that parses a new hire's capabilities (via resume) and dynamically maps an optimized, personalized training pathway to achieve role-specific competency.
 
@@ -6,13 +6,13 @@ An AI-driven adaptive learning engine that parses a new hire's capabilities (via
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 
 Corporate onboarding uses static "one-size-fits-all" curricula. Experienced hires waste time on known concepts while beginners are overwhelmed by advanced modules. This engine eliminates that inefficiency using AI to create personalized learning pathways.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 ### 1. Intelligent Parsing (Constrained LLM Generation)
 - Parses resumes and job descriptions using **Llama 3.3 70B** (via Groq) with **Pydantic-enforced schemas** via **Instructor**
@@ -71,7 +71,7 @@ Corporate onboarding uses static "one-size-fits-all" curricula. Experienced hire
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -111,7 +111,7 @@ Corporate onboarding uses static "one-size-fits-all" curricula. Experienced hire
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
@@ -129,7 +129,7 @@ Corporate onboarding uses static "one-size-fits-all" curricula. Experienced hire
 
 ---
 
-## 📊 Datasets
+##  Datasets
 
 | Dataset | Source | Usage |
 |---------|--------|-------|
@@ -197,7 +197,7 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY", "gsk_your_key_here")
 
 ---
 
-## 📐 Algorithms & Original Adaptive Logic
+##  Algorithms & Original Adaptive Logic
 
 ### Skill Depth Scoring (Original)
 Evidence-based proficiency scoring calibrated by skill rarity data:
@@ -246,7 +246,7 @@ Time saved %     = (generic - personalized) / generic × 100
 
 ---
 
-## 📏 Internal Metrics
+##  Internal Metrics
 
 | Metric | Description |
 |--------|-------------|
@@ -259,7 +259,7 @@ Time saved %     = (generic - personalized) / generic × 100
 
 ---
 
-## 🌐 Cross-Domain Scalability
+##  Cross-Domain Scalability
 
 The engine scales across all 24 job categories in the dataset:
 Accountant, Advocate, Agriculture, Apparel, Arts, Automobile, Aviation, Banking, BPO, Business Development, Chef, Construction, Consultant, Designer, Digital Media, Engineering, Finance, Fitness, Healthcare, HR, Information Technology, Public Relations, Sales, Teacher.
@@ -273,7 +273,7 @@ Achieved through:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 adaptive-onboarding-engine/
@@ -324,6 +324,6 @@ adaptive-onboarding-engine/
 
 ---
 
-## 📄 License
+##  License
 
 MIT
