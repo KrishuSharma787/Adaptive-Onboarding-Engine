@@ -6,7 +6,7 @@ load_dotenv()
 # --- API Keys ---
 # Paste your Groq API key directly below, OR set it as an environment variable
 # Get a free key at https://console.groq.com
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "Your API key")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY", "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")
 LLM_MODEL = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
 
 # --- Database ---
